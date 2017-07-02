@@ -287,7 +287,7 @@ public class PhaserRifle extends EnergyWeapon
 
     @Override
     public float getWeaponBaseDamage(ItemStack weapon) {
-        return 8;
+        return 1000;
     }
 
     @Override

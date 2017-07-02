@@ -56,7 +56,7 @@ public class Phaser extends EnergyWeapon implements IWeapon{
     private static final int MAX_HEAT = 80;
     public static final int MAX_LEVEL = 6;
     private static final int KILL_MODE_LEVEL = 3;
-    private static final float KILL_DAMAGE_MULTIPLY = 2f;
+    private static final float KILL_DAMAGE_MULTIPLY = 15f;
     private static final int STUN_SLEEP_MULTIPLY = 5;
     public static final int RANGE = 18;
 
@@ -292,7 +292,7 @@ public class Phaser extends EnergyWeapon implements IWeapon{
         float damage = 0;
         this.TagCompountCheck(item);
         byte level = getPowerLevel(item);
-        if(level >= KILL_MODE_LEVEL)
+        if(level >= 2)
         {
             damage = (float)Math.pow(KILL_DAMAGE_MULTIPLY,level - (KILL_MODE_LEVEL-1));
         }
